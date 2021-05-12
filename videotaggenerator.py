@@ -1,6 +1,6 @@
 
 import os
-import pathlib
+
 
 pathOfFolder=input("Enter the path of the folder - ")
 os.chdir(pathOfFolder)#add your folder path
