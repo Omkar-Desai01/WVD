@@ -1,6 +1,6 @@
 
 import os
-
+import pathlib
 
 pathOfFolder=input("Enter the path of the folder - ")
 os.chdir(pathOfFolder)#add your folder path
@@ -14,6 +14,17 @@ with open('htmlelemets.html','a') as f:
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    * {
+        margin: 10px;
+        padding: 10px;
+        background-color: yellowgreen;
+      }
+      h2, h3{
+          color:black;
+      }
+
+    </style>
     </head>
     <body>''')
 
@@ -34,6 +45,6 @@ with open('htmlelemets.html','a') as f:
         if ele[-3:] == "mp4":
             print("yes")
             f.write("<h3>{}</h3> \n".format(ele[:-4]))
-            f.write("""===<video preload="metadata" controls width="1080" src="{}"></video> \n""".format(ele))
+            f.write("""<video preload="metadata" controls width="1080" src="{}"></video> \n""".format(ele))
     f.write('''</body>
 </html> ''')
